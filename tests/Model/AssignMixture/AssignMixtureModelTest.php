@@ -62,10 +62,6 @@ class AssignMixtureModelTest extends TestCase
     {
         $result = $this->assignMixtureModel->createFoundedTable($this->genericMixture, array($this->mixtureUsage));
 
-        $this->assertArrayHasKey('id_generic_mixture', $result);
-        $this->assertArrayHasKey('name', $result);
-        $this->assertArrayHasKey('supplier_name', $result);
-        $this->assertArrayHasKey('exist', $result);
         $this->assertTrue($result['exist']);
     }
 }
