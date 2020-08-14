@@ -60,7 +60,9 @@ class AssignMixtureModelTest extends TestCase
 
     public function testShouldReturnAssignMixtureToCompany()
     {
-        $result = $this->assignMixtureModel->createFoundedTable($this->genericMixture, array($this->mixtureUsage));
+        $mixtureUsage = array($this->mixtureUsage);
+
+        $result = $this->assignMixtureModel->createFoundedTable($this->genericMixture, $mixtureUsage);
 
         $this->assertTrue($result['exist']);
     }
